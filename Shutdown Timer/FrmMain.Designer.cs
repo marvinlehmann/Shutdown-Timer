@@ -65,7 +65,7 @@
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(312, 39);
-            this.pnlHeader.TabIndex = 3;
+            this.pnlHeader.TabIndex = 0;
             // 
             // lblTitle
             // 
@@ -75,7 +75,7 @@
             this.lblTitle.Location = new System.Drawing.Point(16, 6);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(163, 27);
-            this.lblTitle.TabIndex = 3;
+            this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Shutdown Timer";
             // 
             // lblCountdown
@@ -101,7 +101,7 @@
             this.lblHours.Location = new System.Drawing.Point(50, 23);
             this.lblHours.Name = "lblHours";
             this.lblHours.Size = new System.Drawing.Size(20, 23);
-            this.lblHours.TabIndex = 3;
+            this.lblHours.TabIndex = 0;
             this.lblHours.Text = "h";
             // 
             // grpTime
@@ -115,7 +115,7 @@
             this.grpTime.Location = new System.Drawing.Point(10, 5);
             this.grpTime.Name = "grpTime";
             this.grpTime.Size = new System.Drawing.Size(221, 61);
-            this.grpTime.TabIndex = 0;
+            this.grpTime.TabIndex = 1;
             this.grpTime.TabStop = false;
             this.grpTime.Text = "Set Timer";
             // 
@@ -126,13 +126,13 @@
             this.lblMinutes.Location = new System.Drawing.Point(124, 23);
             this.lblMinutes.Name = "lblMinutes";
             this.lblMinutes.Size = new System.Drawing.Size(25, 23);
-            this.lblMinutes.TabIndex = 5;
+            this.lblMinutes.TabIndex = 0;
             this.lblMinutes.Text = "m";
             // 
             // nudMinutes
             // 
             this.nudMinutes.Font = new System.Drawing.Font("Consolas", 14.25F);
-            this.nudMinutes.Location = new System.Drawing.Point(75, 19);
+            this.nudMinutes.Location = new System.Drawing.Point(75, 18);
             this.nudMinutes.Maximum = new decimal(new int[] {
             59,
             0,
@@ -140,7 +140,12 @@
             0});
             this.nudMinutes.Name = "nudMinutes";
             this.nudMinutes.Size = new System.Drawing.Size(47, 30);
-            this.nudMinutes.TabIndex = 2;
+            this.nudMinutes.TabIndex = 3;
+            this.nudMinutes.Value = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
             // 
             // lblSeconds
             // 
@@ -149,7 +154,7 @@
             this.lblSeconds.Location = new System.Drawing.Point(201, 23);
             this.lblSeconds.Name = "lblSeconds";
             this.lblSeconds.Size = new System.Drawing.Size(18, 23);
-            this.lblSeconds.TabIndex = 4;
+            this.lblSeconds.TabIndex = 0;
             this.lblSeconds.Text = "s";
             // 
             // nudSeconds
@@ -163,7 +168,12 @@
             0});
             this.nudSeconds.Name = "nudSeconds";
             this.nudSeconds.Size = new System.Drawing.Size(46, 30);
-            this.nudSeconds.TabIndex = 1;
+            this.nudSeconds.TabIndex = 4;
+            this.nudSeconds.Value = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
             // 
             // nudHours
             // 
@@ -176,7 +186,12 @@
             0});
             this.nudHours.Name = "nudHours";
             this.nudHours.Size = new System.Drawing.Size(42, 30);
-            this.nudHours.TabIndex = 0;
+            this.nudHours.TabIndex = 2;
+            this.nudHours.Value = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
             // 
             // rbRestart
             // 
@@ -184,7 +199,8 @@
             this.rbRestart.Location = new System.Drawing.Point(102, 19);
             this.rbRestart.Name = "rbRestart";
             this.rbRestart.Size = new System.Drawing.Size(59, 17);
-            this.rbRestart.TabIndex = 9;
+            this.rbRestart.TabIndex = 7;
+            this.rbRestart.TabStop = true;
             this.rbRestart.Text = "Restart";
             this.rbRestart.UseVisualStyleBackColor = true;
             // 
@@ -195,7 +211,7 @@
             this.rbShutdown.Location = new System.Drawing.Point(18, 19);
             this.rbShutdown.Name = "rbShutdown";
             this.rbShutdown.Size = new System.Drawing.Size(73, 17);
-            this.rbShutdown.TabIndex = 8;
+            this.rbShutdown.TabIndex = 6;
             this.rbShutdown.TabStop = true;
             this.rbShutdown.Text = "Shutdown";
             this.rbShutdown.UseVisualStyleBackColor = true;
@@ -205,7 +221,7 @@
             this.btnSet.Location = new System.Drawing.Point(235, 10);
             this.btnSet.Name = "btnSet";
             this.btnSet.Size = new System.Drawing.Size(67, 56);
-            this.btnSet.TabIndex = 2;
+            this.btnSet.TabIndex = 9;
             this.btnSet.Text = "SET";
             this.btnSet.UseVisualStyleBackColor = true;
             this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
@@ -218,7 +234,7 @@
             this.grpOptions.Location = new System.Drawing.Point(10, 72);
             this.grpOptions.Name = "grpOptions";
             this.grpOptions.Size = new System.Drawing.Size(292, 48);
-            this.grpOptions.TabIndex = 1;
+            this.grpOptions.TabIndex = 5;
             this.grpOptions.TabStop = false;
             this.grpOptions.Text = "Options";
             // 
@@ -230,7 +246,7 @@
             this.chkForceClosing.Location = new System.Drawing.Point(190, 20);
             this.chkForceClosing.Name = "chkForceClosing";
             this.chkForceClosing.Size = new System.Drawing.Size(90, 17);
-            this.chkForceClosing.TabIndex = 0;
+            this.chkForceClosing.TabIndex = 8;
             this.chkForceClosing.Text = "Force Closing";
             this.chkForceClosing.UseVisualStyleBackColor = true;
             // 
@@ -244,7 +260,7 @@
             this.pnlMain.Location = new System.Drawing.Point(0, 39);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(312, 132);
-            this.pnlMain.TabIndex = 2;
+            this.pnlMain.TabIndex = 0;
             // 
             // FrmMain
             // 
