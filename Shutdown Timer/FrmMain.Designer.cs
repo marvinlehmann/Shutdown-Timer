@@ -47,6 +47,7 @@
             this.grpOptions = new System.Windows.Forms.GroupBox();
             this.chkForceClosing = new System.Windows.Forms.CheckBox();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.tipShutdownTime = new System.Windows.Forms.ToolTip(this.components);
             this.pnlHeader.SuspendLayout();
             this.grpTime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMinutes)).BeginInit();
@@ -81,7 +82,7 @@
             // lblCountdown
             // 
             this.lblCountdown.AutoSize = true;
-            this.lblCountdown.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCountdown.Font = new System.Drawing.Font("Consolas", 15.75F);
             this.lblCountdown.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblCountdown.Location = new System.Drawing.Point(196, 7);
             this.lblCountdown.Name = "lblCountdown";
@@ -97,7 +98,7 @@
             // lblHours
             // 
             this.lblHours.AutoSize = true;
-            this.lblHours.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHours.Font = new System.Drawing.Font("Calibri", 14F);
             this.lblHours.Location = new System.Drawing.Point(50, 23);
             this.lblHours.Name = "lblHours";
             this.lblHours.Size = new System.Drawing.Size(20, 23);
@@ -122,7 +123,7 @@
             // lblMinutes
             // 
             this.lblMinutes.AutoSize = true;
-            this.lblMinutes.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinutes.Font = new System.Drawing.Font("Calibri", 14F);
             this.lblMinutes.Location = new System.Drawing.Point(124, 23);
             this.lblMinutes.Name = "lblMinutes";
             this.lblMinutes.Size = new System.Drawing.Size(25, 23);
@@ -141,16 +142,11 @@
             this.nudMinutes.Name = "nudMinutes";
             this.nudMinutes.Size = new System.Drawing.Size(47, 30);
             this.nudMinutes.TabIndex = 3;
-            this.nudMinutes.Value = new decimal(new int[] {
-            59,
-            0,
-            0,
-            0});
             // 
             // lblSeconds
             // 
             this.lblSeconds.AutoSize = true;
-            this.lblSeconds.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeconds.Font = new System.Drawing.Font("Calibri", 14F);
             this.lblSeconds.Location = new System.Drawing.Point(201, 23);
             this.lblSeconds.Name = "lblSeconds";
             this.lblSeconds.Size = new System.Drawing.Size(18, 23);
@@ -169,11 +165,6 @@
             this.nudSeconds.Name = "nudSeconds";
             this.nudSeconds.Size = new System.Drawing.Size(46, 30);
             this.nudSeconds.TabIndex = 4;
-            this.nudSeconds.Value = new decimal(new int[] {
-            59,
-            0,
-            0,
-            0});
             // 
             // nudHours
             // 
@@ -187,11 +178,6 @@
             this.nudHours.Name = "nudHours";
             this.nudHours.Size = new System.Drawing.Size(42, 30);
             this.nudHours.TabIndex = 2;
-            this.nudHours.Value = new decimal(new int[] {
-            23,
-            0,
-            0,
-            0});
             // 
             // rbRestart
             // 
@@ -309,6 +295,7 @@
         private System.Windows.Forms.GroupBox grpOptions;
         private System.Windows.Forms.CheckBox chkForceClosing;
         private System.Windows.Forms.Panel pnlMain;
+        private System.Windows.Forms.ToolTip tipShutdownTime;
     }
 }
 

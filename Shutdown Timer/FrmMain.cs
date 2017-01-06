@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace Shutdown_Timer
@@ -22,6 +23,7 @@ namespace Shutdown_Timer
                 _shutdownTime = DateTime.Now.Add(new TimeSpan((int)nudHours.Value, (int)nudMinutes.Value, (int)nudSeconds.Value));
                 btnSet.Text = "CANCEL";
                 lblCountdown.Text = (_shutdownTime - DateTime.Now).ToString(@"hh\:mm\:ss");
+                tipShutdownTime.SetToolTip(lblCountdown, _shutdownTime.ToString(CultureInfo.CurrentCulture));
                 tmrTime.Start();
             }
             else
@@ -30,6 +32,7 @@ namespace Shutdown_Timer
                 tmrTime.Stop();
                 btnSet.Text = "SET";
                 lblCountdown.Text = "00:00:00";
+                tipShutdownTime.SetToolTip(lblCountdown, null);
             }
         }
 
@@ -49,7 +52,8 @@ namespace Shutdown_Timer
         private void UpdateCountdown()
         {
             var timeToShutdown = _shutdownTime - DateTime.Now;
-            lblCountdown.Invoke((MethodInvoker)delegate { lblCountdown.Text = timeToShutdown.ToString(@"hh\:mm\:ss"); });
+            var roundedTimeSpan = new TimeSpan((long)Math.Round(1.0 * timeToShutdown.Ticks / 10000000) * 10000000); // round to nearest second (7 digits: ms)
+            lblCountdown.Invoke((MethodInvoker)delegate { lblCountdown.Text = roundedTimeSpan.ToString(@"hh\:mm\:ss"); });
         }
 
         private void Shutdown()
