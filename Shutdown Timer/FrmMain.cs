@@ -52,7 +52,7 @@ namespace Shutdown_Timer
         private void UpdateCountdown()
         {
             var timeToShutdown = _shutdownTime - DateTime.Now;
-            var roundedTimeSpan = new TimeSpan((long)Math.Round(1.0 * timeToShutdown.Ticks / 10000000) * 10000000); // round to nearest second (7 digits: ms)
+            var roundedTimeSpan = new TimeSpan((long)Math.Round(1.0 * timeToShutdown.Ticks); // round to nearest second (7 digits: ms) (1.0 * timeToShutdown.Ticks / 10000000) * 10000000) == timeToShutdown.Ticks
             lblCountdown.Invoke((MethodInvoker)delegate { lblCountdown.Text = roundedTimeSpan.ToString(@"hh\:mm\:ss"); });
         }
 
